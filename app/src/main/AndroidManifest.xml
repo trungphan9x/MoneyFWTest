@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.trung.applicationdoctor">
+    package="com.trung.applicationMoneyFW">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
-        android:name=".ApplicationDoctor"
+        android:name=".ApplicationMoneyFWTest"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,27 +16,20 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".ui.activity.main.MainActivity"
-            android:theme="@style/AppTheme.WhiteStatusBar"
-            android:configChanges="orientation|screenSize">
-
+        <activity
+            android:name=".ui.activity.main.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme.WhiteStatusBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity
             android:name=".ui.activity.detail.DetailActivity"
             android:configChanges="orientation|screenSize"
-            android:windowTranslucentStatus="true"/>
-
-        <activity
-            android:name=".ui.activity.signin.SignInActivity"
-            android:theme="@style/AppTheme.WhiteStatusBar"
-            android:configChanges="orientation|screenSize">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+            android:windowTranslucentStatus="true" />
 
     </application>
 

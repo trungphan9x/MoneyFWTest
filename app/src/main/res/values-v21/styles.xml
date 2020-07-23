@@ -10,6 +10,6 @@
 
     <style name="MyCustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
         <!--buttons color-->
-        <item name="colorAccent">@color/tealish</item>
+        <item name="colorAccent">@color/black</item>
     </style>
 </resources>
